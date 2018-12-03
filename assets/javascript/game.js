@@ -21,7 +21,7 @@ $(document).ready(function () {
         var greenCrystal = randomIntFromInterval(1, 12);
         var blueCrystal = randomIntFromInterval(1, 12);
         var orangeCrystal = randomIntFromInterval(1, 12);
-        //console.log(whiteCrystal, greenCrystal, blueCrystal, orangeCrystal);
+
         //adding attr to each crystal
         $("#diamond1").attr("crystalValue", whiteCrystal);
         $("#green").attr("crystalValue", greenCrystal);
@@ -30,7 +30,7 @@ $(document).ready(function () {
         $(".score").text(0);
     }
 
-    //console.log(randomNumber);
+    
     gameStart();
     //create .on click on each crystal or add event listener 
     $(".crystal").click(function () {
@@ -40,22 +40,20 @@ $(document).ready(function () {
         score = score + crystaValue;
         //displaying the updated score
         $(".score").text(score);
-        console.log(crystaValue)
         //if the value of score is equal to randomNumber increment win by 1
         if (score == randomNumber) { //updating the win value 
             wins++;
             $("#wins").text(wins);
-            $("#winAndLoss").html('<p>You win ☺</p>'); //adding html unicode to the win
+            $("#winAndLoss").html('<p>You won ☺</p>'); //adding html unicode to the win
             gameStart();
             //if the value of score is greater than randomNumber increment losses by 1
         } else if (score > randomNumber) { //updating the losses value
             losses++;
             $("#losses").text(losses);
-            $("#winAndLoss").html('<p>You lose &#9785;</p>'); //adding html unicode to the losses
-
+            $("#winAndLoss").html('<p>You lost &#9785;</p>'); //adding html unicode to the losses
             gameStart();
         }
-        //re
+        
 
     })
 
