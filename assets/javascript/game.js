@@ -8,7 +8,7 @@ $(document).ready(function () {
     var score;
     var wins = 0;
     var losses = 0;
-    // 1. generante random number 19 and 120
+    // 1. generate random number 19 and 120
     var randomNumber;
     //create a function that will be called to reset the game 
     function gameStart() {
